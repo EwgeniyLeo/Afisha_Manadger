@@ -30,10 +30,10 @@ public class FilmManadger {
 
     public FilmsData[] findLast() {
         int resultLength;
-        if (limitFilms == 10) {
-            resultLength = 10;
-        } else {
+        if (limitFilms < films.length) {
             resultLength = limitFilms;
+        } else {
+            resultLength = films.length;
         }
 
         FilmsData[] reverse = new FilmsData[resultLength];
